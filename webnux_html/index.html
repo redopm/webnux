@@ -11,7 +11,7 @@
 </head>
 <body background="image.jpg">
 
-<form action="/cgi-bin/add.cgi" method="POST">
+<form action="/cgi-bin/basic.cgi" method="POST">
 <div class="header">
   <a href="#default" class="logo">Webnux</a>
   <div class="header-right">
@@ -28,57 +28,45 @@
 
 <div>
 <table cellpadding="0" cellspacing="0">
-<tr valign="top">
+<tr>
 <th>Serial No.</th><th>Task to perform </th><tb/><th>Serial.No</th><th>Task to perform </th>
 </tr>
-<tr valign="top">
-<td> 1.</td><td><input type="radio" name="cmd">To find date</td>
-<td>2.</td><td><input type="radio" name="cmd">To find current login user</td>
-</tr>
-<tr valign="top">
-<td> 3.</td><td><input type="radio" name="cmd">To find calander</td>
-<td> 4.</td><td><input type="radio" name="cmd">To make folder</td>
+<tr>
+<td> 1.</td><td><h3></h3><input type="radio" name="cmd" value="date">To find date</td>
+<td>2.</td><td><input type="radio" name="cmd" value="whoami">To find current login user</td>
 </tr>
 <tr>
-<td> 5.</td><td><input type="radio" name="cmd">To remove the folder</td>
-<td>6.</td><td><input type="radio" name="cmd">To find the current shell</td>
+<td> 3.</td><td><input type="radio" name="cmd" value="cal">To find calander</td>
+<td>4.</td><td><input type="radio" name="cmd" value="echo $0">To find the current shell</td>
 </tr>
 <tr>
-<td> 7.</td><td><input type="radio" name="cmd">To find all file and folder </td>
-<td>8.</td><td><input type="radio" name="cmd">Open text editor</td>
+<td> 6.</td><td><input type="radio" name="cmd" value="ls" >To find all file and folder </td>
+<td> 23.</td><td><input type="radio" name="cmd" value="cat /sys/class/net/*/address">To Mac address</td>
 </tr>
 <tr>
-<td> 9.</td><td><input type="radio" name="cmd">show login all users</td>
-<td> 10.</td><td><input type="radio" name="cmd">show all file and folder permission</td>
+<td> 8.</td><td><input type="radio" name="cmd" value="pinky">show login all users</td>
+<td> 9.</td><td><input type="radio" name="cmd" value="ls -l">show all file and folder permission</td>
 </tr>
 <tr>
-<td> 11.</td><td><input type="radio" name="cmd">To remove file </td>
-<td>12.</td><td><input type="radio" name="cmd">To add user</td>
+<td> 10.</td><td><input type="radio" name="cmd" value="cat /sys/class/net/*/address">To Mac address</td>
+<td> 11.</td><td><input type="radio" name="cmd" value="pwd">To find current location</td>
 </tr>
 <tr>
-<td> 13.</td><td><input type="radio" name="cmd">To remove user</td>
-<td>14.</td><td><input type="radio" name="cmd">To add password on user</td>
+<td> 12.</td><td><input type="radio" name="cmd" value="wc -c /var/www/html/index.html ">To word count of current file</td>
+<td>13.</td><td><input type="radio" name="cmd" value="wc -l /var/www/html/index.html">To line count of current file</td>
 </tr>
 <tr>
-<td> 15.</td><td><input type="radio" name="cmd">To find all your history</td>
-<td> 16.</td><td><input type="radio" name="cmd">To find current location</td>
+<td> 14.</td><td><input type="radio" name="cmd" value="uname -v">To find virsion of operating system </td>
+<td>15.</td><td><input type="radio" name="cmd" value="uname">To find name of operating system</td>
 </tr>
 <tr>
-<td> 17.</td><td><input type="radio" name="cmd">To word count of current file</td>
-<td>18.</td><td><input type="radio" name="cmd">To line count of current file</td>
-</tr>
+<td> 16.</td><td><input type="radio" name="cmd" value="hostname -I | awk '{print $1}'">To find IP address </td>
+<td> 17.</td><td><input type="radio" name="cmd" value="ifconfig | grep netmask">To find NeT Mask</td></tr>
 <tr>
-<td> 19.</td><td><input type="radio" name="cmd">To find virsion of operating system </td>
-<td>20.</td><td><input type="radio" name="cmd">To find name of operating system</td>
+
+
 </tr>
-<tr>
-<td> 21.</td><td><input type="radio" name="cmd">To find IP address </td>
-<td> 22.</td><td><input type="radio" name="cmd">To find NeT Mask</td></tr>
-<tr>
-<td> 23.</td><td><input type="radio" name="cmd">To Mac address</td>
-<td>24.</td><td><input type="radio" name="cmd">To find any command location</td>
-</tr>
-<tr><td>25.</td><td><input type="radio" name="cmd">To find date</td>
+<tr><td>25.</td><td><input type="radio" name="cmd" >To find date</td>
 <td>26.</td><td><input type="radio" name="cmd">To find current login user</td>
 </tr>
 <tr>
@@ -91,10 +79,11 @@
 </tr>
 </table>
 </div>
+
 <div class="clearfix">
       <button type="reset" name="reset" class="cancelbtn">Reset</button>
-      <button type="submit" name="submit" class="signupbtn">Proceed Now</button>
-    </div>
+      <button type="submit" name="submit" class="signupbtn" value="submit">proceed Now</button>
+</div>
 
    
 </form>
