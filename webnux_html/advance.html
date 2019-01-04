@@ -10,14 +10,14 @@
 
 </head>
 <body>
-
+<form action="/cgi-bin/basic.cgi" method="POST">
 <div class="header">
   <a href="#default" class="logo">Webnux</a>
   <div class="header-right">
     <a href="index.html">Basic Task</a>
     <a class="active" href="advance.html">Advance</a>
     <a href="memory.html">Memory</a>
-    <a href="software.html">Software</a>
+    
     <a href="terminal.html">Terminal</a>
     <a href="register.html">Register</a>
   </div>
@@ -30,51 +30,34 @@
 <th>Serial No.</th><th>Task to perform </th><tb/><th>Serial.No</th><th>Task to perform </th>
 </tr>
 <tr valign="top">
-<td> 1.</td><td><input type="radio" name="cmd">To find date</td>
-<td>2.</td><td><input type="radio" name="cmd">To find current login user</td>
+<td> 1.</td><td><input type="radio" name="cmd" value="echo /etc/*_ver* /etc/*-rel*; cat /etc/*_ver* /etc/*-rel*">To show all the available information about your current distribution, package management and base details</td>
+<td>2.</td><td><input type="radio" name="cmd" value="find . -type l ! -exec test -e {} \; -print"> Find all broken sym links in your system</td>
 </tr>
 <tr valign="top">
-<td> 3.</td><td><input type="radio" name="cmd">To find calander</td>
-<td> 4.</td><td><input type="radio" name="cmd">To make folder</td>
+<td> 3.</td><td><input type="radio" name="cmd" value='watch grep \"cpu MHz\" /proc/cpuinfo'>Monitor CPU speed in real time</td>
+<td> 4.</td><td><input type="radio" name="cmd" value="tune2fs -l /dev/sda1 | grep 'Filesystem created:'">Find the exact installation and date a Linux OS</td>
 </tr>
 <tr>
-<td> 5.</td><td><input type="radio" name="cmd">To remove the directory</td>
-<td>6.</td><td><input type="radio" name="cmd">To find the current shell</td>
+<td> 5.</td><td><input type="radio" name="cmd" value="journalctl -u sleep.target"> Find when was the last time your system went to sleep</td>
+<td>6.</td><td><input type="radio" name="cmd" value="dmesg -wx">To monitor Kernel messages in live</td>
 </tr>
 <tr>
-<td> 7.</td><td><input type="radio" name="cmd">To find date</td>
-<td>8.</td><td><input type="radio" name="cmd">To find current login user</td>
+<td> 7.</td><td><input type="radio" name="cmd" value="ls -alv">List hidden files and directories</td>
+<td>8.</td><td><input type="radio" name="cmd" value="ifconfig -a">Display details of All interfaces including disabled interfaces </td>
 </tr>
 <tr>
-<td> 9.</td><td><input type="radio" name="cmd">To find calander</td>
-<td> 10.</td><td><input type="radio" name="cmd">To make folder</td>
+<td> 9.</td><td><input type="radio" name="cmd" value="netstat -a">List all the network ports</td>
+<td>10.</td><td><input type="radio" name="cmd" value="top">Displays the processes of CPU</td>
 </tr>
 <tr>
-<td> 11.</td><td><input type="radio" name="cmd">To remove the directory</td>
-<td>12.</td><td><input type="radio" name="cmd">To find the current shell</td>
+<td> 11.</td><td><input type="radio" name="cmd" value="lsof">lsof stands for “list open files” and displays all the files that your system has currently opened</td>
+<td>12.</td><td><input type="radio" name="cmd" value="free -h">Check Current Usage in Human Readable Format</td>
 </tr>
-<tr>
-<td> 13.</td><td><input type="radio" name="cmd">To find date</td>
-<td>14.</td><td><input type="radio" name="cmd">To find current login user</td>
-</tr>
-<tr>
-<td> 15.</td><td><input type="radio" name="cmd">To find calander</td>
-<td> 16.</td><td><input type="radio" name="cmd">To make folder</td>
-</tr>
-<tr>
-<td> 17.</td><td><input type="radio" name="cmd">To remove the directory</td>
-<td>18.</td><td><input type="radio" name="cmd">To find the current shell</td>
-</tr>
-<tr>
-<td> 19.</td><td><input type="radio" name="cmd">To find date</td>
-<td>20.</td><td><input type="radio" name="cmd">To find current login user</td>
-</tr>
-
 </table>
 </div>
 <div class="clearfix">
-      <button type="button" class="cancelbtn">Reset</button>
-      <button type="submit" class="signupbtn">Proceed Now</button>
-    </div>
+      <button type="reset" name="reset" class="cancelbtn">Reset</button>
+      <button type="submit" name="submit" class="signupbtn" value="submit">proceed Now</button>
+</form>
 </body>
 </html>
