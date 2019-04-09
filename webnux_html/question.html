@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- Favicon -->
+  <link href="fevicon.jpg" rel="icon" type="jpg">
+
+  <!-- Styles -->
+  <link href="styles.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="header">
+  <a href="#default" class="logo">Webnux</a>
+  <div class="header-right">
+    <a href="index.html">Basic Task</a>
+    <a href="advance.html">Advance</a>
+    <a href="memory.html">Memory</a>
+   <a href="user.html">User manage</a>
+    <a href="sortware.html">Software</a>
+    <a href="terminal.html">Terminal</a>
+    <a href="question.html"   class="active">Problem</a>
+   <div class="dropdown">
+  <button class="dropbtn">Account</button>
+  <div class="dropdown-content">
+    <a href="login.html">Login</a>
+    <a href="Register.html">Register</a>
+  </div>
+  </div>
+  </div>
+</div>
+<p style="font-size:40px;">FAQ (fraqentaly ask question)</p>
+<button class="accordion signupbtn">What is CLI mode?</button>
+<div class="panel">
+  <p>CLI (commmand line interface)mode is a interface for user to give the command to system perform the task.</p>
+</div>
+
+<button class="accordion signupbtn">What is GUI mode? </button>
+<div class="panel">
+  <p>GUI (Graphocal user interface ) mode is also work on command which is given by user but the diffence between cli and gui is do not remmber the command press graphical button and command will be trigger.</p>
+</div>
+
+<button class="accordion signupbtn">What is the SElinux seurity? </button>
+<div class="panel">
+  <p>SELinux, or Security-Enhanced Linux, is a part of the Linux security kernel that acts as a protective agent on servers. In the Linux kernel, SELinux relies on mandatory access controls (MAC) that restrict users to rules and policies set by the system administrator. MAC is a higher level of access control than the standard discretionary access control (DAC), and prevents security breaches in the system by only processing necessary files that the administrator pre-approves.<br><b>SELinux modes</b>
+
+There are three modes of SELinux: Enforcing, Permissive and Disabled.
+
+   <br><b> Enforcing mode</b> is the default mode at installation of SELinux. It will enforce the policies on the system, deny access and log actions.
+   <br> <b>Permissive mode</b> is the most commonly used mode for troubleshooting SELinux. In this mode, SELinux enables but does not enforce security policies. Also, this means that actions will result in a warning and log for the system administrator.
+    <br><b>Disabled mode</b> means that SELinux is turned off and the security policies do not protect the server.
+</p>
+</div>
+<button class="accordion signupbtn">what is firewall ?</button>
+<div class="panel">
+  <p>A firewall absolutely isolates your computer from the Internet using a "wall of code" that inspects each individual "packet" of data as it arrives at either side of the firewall — inbound to or outbound from your computer — to determine whether it should be allowed to pass or be blocked.
+<br>
+Firewalls have the ability to further enhance security by enabling granular control over what types of system functions and processes have access to networking resources. These firewalls can use various types of signatures and host conditions to allow or deny traffic. Although they sound complex, firewalls are relatively easy to install, setup and operate.</p>
+</div>
+<button class="accordion signupbtn">what is permission in linux ?</button>
+<div class="panel">
+  <p>Alternatively referred to as rights and privileges, permissions are access details given by users or network administrators that define access rights to files on a network. For example, a person who works for a company's customer service department may be privileged to view a customer's information otherwise blocked to other employees.</p>
+</div>
+<button class="accordion signupbtn"></button>
+<div class="panel">
+  <p></p>
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("activate");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
+</html>

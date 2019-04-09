@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- Favicon -->
+  <link href="fevicon.jpg" rel="icon" type="jpg">
+
+  <!-- Styles -->
+  <link href="styles.css" rel="stylesheet">
+
+</head>
+<body>
+
+<form action="/cgi-bin/user.cgi" method="POST">
+<div class="header">
+  <a href="#default" class="logo">Webnux</a>
+  <div class="header-right">
+    <a href="index.html">Basic Task</a>
+    <a href="advance.html">Advance</a>
+    <a href="memory.html">Memory</a>
+    <a href="user.html" class="active">User manage</a>
+    <a href="sortware.html">Software</a>
+    <a href="terminal.html">Terminal</a>
+    <a href="question.html">Problem</a>
+   <div class="dropdown">
+  <button class="dropbtn">Account</button>
+  <div class="dropdown-content">
+    <a href="login.html">Login</a>
+    <a href="Register.html">Register</a>
+  </div>
+  </div>
+  </div>
+</div>
+<div>
+<table cellpadding="0" cellspacing="0">
+<tr>
+<th>Action</th><th>Task to perform </th><tb/><th>Action</th><th>Task to perform </th>
+</tr>
+<tr>
+<td> 1.<input type="radio" name="cmd" value="add">Add User</td><td><input type="text" name="add" placeholder="Enter user name to add..."></td>
+
+<td>2.<input type="radio" name="cmd" value="del">Delete</td><td><input type="text" name="del" placeholder="Enter user name to Delete..."></td>
+</tr>
+<tr>
+<td> 3.<input type="radio" name="cmd" value="bash">Bash Shell</td><td><input type="text" name="bash" placeholder="Enter user name to  Add shell..."></td>
+<td>4.<input type="radio" name="cmd" value="nologin">NoLogin shell</td><td><input type="text" name="nologin" placeholder="Enter software name to enable service..."></td>
+</tr>
+</table>
+</div>
+
+<div class="clearfix">
+      <button type="reset" name="reset" class="cancelbtn">Reset</button>
+      <button type="submit" name="submit" class="signupbtn" value="submit">proceed Now</button>
+</div>
+
+   
+</form>
+</body>
+</html>

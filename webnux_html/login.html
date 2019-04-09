@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- Favicon -->
+  <link href="fevicon.jpg" rel="icon" type="jpg">
+
+  <!-- Styles -->
+  <link href="styles.css" rel="stylesheet">
+
+</head>
+<body>
+
+<form action="/cgi-bin/basic.cgi" method="POST">
+<div class="header">
+  <a href="#default" class="logo">Webnux</a>
+  <div class="header-right">
+    <a href="index.html">Basic Task</a>
+    <a href="advance.html">Advance</a>
+    <a href="memory.html">Memory</a>
+    <a href="user.html">User manage</a>
+    <a href="sortware.html">Software</a>
+    <a href="terminal.html">Terminal</a>
+    <a href="question.html">Problem</a>
+   <div class="dropdown">
+  <button class="dropbtn active">Account</button>
+  <div class="dropdown-content">
+    <a href="login.html">Login</a>
+    <a href="Register.html">Register</a>
+  </div>
+  </div>
+  </div>
+</div>
+<h2>Login Form</h2>
+
+<form action="/cgi-bin/register.cgi">
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+        
+    <button type="submit"  class="signupbtn">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+
+</body>
+</html>
+

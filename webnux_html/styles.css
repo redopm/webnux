@@ -1,7 +1,7 @@
 /* Style the header with a grey background and some padding */
 .header {
   overflow: hidden;
-  background-color: #FF7F50;
+  background-color: white;
   padding: 20px 20px;
 }
 
@@ -31,7 +31,7 @@
 
 /* Style the active/current link*/
 .header a.active {
-  background-color: dodgerblue;
+  background-color: green;
   color: white;
 }
 
@@ -94,7 +94,7 @@ input[type=submit]:focus{
   background-color: #ff6347;
   outline: none;
 }
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -114,31 +114,33 @@ hr {
 }
 
 /* Set a style for all buttons */
-button {
+.signupbtn {
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
+  margin: 8px 10px;
+  border: solid;
   cursor: pointer;
-  width: 100%;
+  width: 30%;
   opacity: 0.9;
+  float: center;
 }
 
-button:hover {
+.signupbtn:hover {
   opacity:1;
 }
 
 /* Extra styles for the cancel button */
 .cancelbtn {
   padding: 14px 20px;
+  margin: 8px 200px;
   background-color: #f44336;
 }
 
 /* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
+.cancelbtn {
   float: left;
-  width: 50%;
+  width: 30%
 }
 
 /* Add padding to container elements */
@@ -156,7 +158,83 @@ button:hover {
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
   .cancelbtn, .signupbtn {
-     width: 100%;
+     width: relative;
   }
+}
+
+.dropbtn {
+  background-color: white;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.activate, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.activate:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
 

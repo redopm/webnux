@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- Favicon -->
+  <link href="fevicon.jpg" rel="icon" type="jpg">
+
+  <!-- Styles -->
+  <link href="styles.css" rel="stylesheet">
+
+</head>
+<body>
+
+<form action="/cgi-bin/software.cgi" method="POST">
+<div class="header">
+  <a href="#default" class="logo">Webnux</a>
+  <div class="header-right">
+    <a href="index.html">Basic Task</a>
+    <a href="advance.html">Advance</a>
+    <a href="memory.html">Memory</a>
+    <a href="user.html">User manage</a>
+    <a href="sortware.html" class="active">Software</a>
+    <a href="terminal.html">Terminal</a>
+    <a href="question.html">Problem</a>
+    <div class="dropdown">
+     <button class="dropbtn">Account</button>
+    <div class="dropdown-content">
+    <a href="login.html">Login</a>
+    <a href="Register.html">Register</a>
+  </div>
+  </div>
+  </div>
+</div>
+
+<div>
+<table cellpadding="0" cellspacing="0">
+<tr>
+<th>Action</th><th>Task to perform </th><tb/><th>Action</th><th>Task to perform </th>
+</tr>
+<tr>
+<td> 1.<input type="radio" name="cmd" value="install">Install</td><td><input type="text" name="install" placeholder="Enter software name to install..."></td>
+
+<td>2.<input type="radio" name="cmd" value="remove">Uninstall</td><td><input type="text" name="remove" placeholder="Enter software name to Uninstall..."></td>
+</tr>
+<tr>
+<td> 3.<input type="radio" name="cmd" value="start">Start/Restart</td><td><input type="text" name="start" placeholder="Enter software name to Start/restart service..."></td>
+<td>4.<input type="radio" name="cmd" value="enable">Enable</td><td><input type="text" name="enable" placeholder="Enter software name to enable service..."></td>
+</tr>
+<tr>
+<td>5.<input type="radio" name="cmd" value="stop">Stop</td><td><input type="text" name="stop" placeholder="Enter software name to stop service..." ></td>
+<td>6.<input type="radio" name="cmd" value="check">Software list</td><td><input type="text" name="check" placeholder="Check software which is already installed..." ></td>
+</tr>
+</table>
+</div>
+
+<div class="clearfix">
+      <button type="reset" name="reset" class="cancelbtn">Reset</button>
+      <button type="submit" name="submit" class="signupbtn" value="submit">proceed Now</button>
+</div>
+
+   
+</form>
+</body>
+</html>
